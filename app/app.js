@@ -1,12 +1,10 @@
-'use strict';
-
-// Declare app level module which depends on views, and components
-angular.module('myApp', [
+angular.module('blaa', [
   'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
-]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+    'blaa.home'           // Newly added home module
+  ]).config(['$routeProvider', function($routeProvider){
+    // Set defualt view of our app to home
+
+    $routeProvider.otherwise({
+        redirectTo: '/home'
+    });
+  }]);
